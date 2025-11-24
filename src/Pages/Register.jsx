@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../Firebase/Firebase.config";
@@ -7,6 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
   const { registerWithEmailPassword ,setUser,user,handleGoogleSignIn} = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +28,7 @@ const Register = () => {
           .catch((error) => {
             console.log(error);
           });
+          navigate("/")
       })
       .catch((error) => {
         console.log(error);
@@ -37,6 +40,7 @@ const Register = () => {
     .then(result =>{
       const user = result.user
       setUser(user)
+       navigate("/")
     }).catch(error =>{
       console.log(error)
     })
