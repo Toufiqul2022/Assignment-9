@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import 'animate.css';
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -12,7 +13,9 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-20 py-10">
+    <div>
+      <h1 className="text-3xl font-bold text-center mt-10">Specialized Veterinary & Pet Services</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-20 py-10 animate__animated animate__heartBeat">
       {services.map((service) => (
         <div key={service?.serviceId} className="card bg-base-100 shadow-sm">
           <figure>
@@ -50,6 +53,8 @@ const Services = () => {
         </div>
       ))}
     </div>
+    </div>
+    
   );
 };
 

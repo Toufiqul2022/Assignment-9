@@ -11,7 +11,7 @@ import image3 from "../assets/image-7.jpg";
 
 const Slider = () => {
   return (
-    <div className="max-w-11/12 mx-auto my-5">
+    <div className="max-w-11/12 mx-auto my-5 animate__animated animate__backInLeft">
       <Swiper
         navigation={true}
         loop={true}
