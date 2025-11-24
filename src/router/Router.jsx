@@ -8,11 +8,13 @@ import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
 import ServiceDetails from "../Pages/ServiceDetails";
 import ForgetPassword from "../Pages/ForgetPassword";
+import Error404 from "../components/Error404";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement:<Error404></Error404>,
     children: [
       {
         index: true,
