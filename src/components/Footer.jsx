@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-base-200 text-base-content pt-10">
       <div className="footer sm:footer-horizontal max-w-7xl mx-auto p-10">
         <nav>
-          <h2 className="footer-title text-3xl font-bold">PetCare</h2>
+          <h2 className="footer-title text-3xl font-bold">PetWell Care</h2>
           <p className="max-w-xs text-sm">
             Providing love, wellness and comfort for your furry family members.
           </p>

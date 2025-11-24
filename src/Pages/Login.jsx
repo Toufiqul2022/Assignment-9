@@ -26,6 +26,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate("/");
         navigate(location.state);
       })
       .catch((error) => {
@@ -39,6 +40,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate("/");
         navigate(location.state);
       })
       .catch((error) => {
@@ -52,7 +54,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-200">
       <ToastContainer position="top-right" autoClose={40000} />
       <div className="hero-content flex-col">
         <div className="text-center">
