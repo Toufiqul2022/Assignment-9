@@ -27,7 +27,7 @@ const MyProfile = () => {
           displayName: name,
           photoURL: photoUrl,
         });
-        setUpdate(false); // optional: close form
+        setUpdate(false);
       })
       .catch((error) => {
         console.log(error);
